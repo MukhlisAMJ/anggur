@@ -17,7 +17,7 @@
             x-transition:enter-start="opacity-0 transform -translate-y-4"
             x-transition:enter-end="opacity-100 transform translate-y-0"
             x-transition:leave="transition ease-in duration-300"
-            x-transition:leave-start="opacity-600 transform translate-y-0"
+            x-transition:leave-start="opacity-200 transform translate-y-0"
             x-transition:leave-end="opacity-0 transform -translate-y-4"
             class="{{ $bgColor }} fixed top-4 right-4 z-50 p-4 mb-4 text-sm rounded-lg" role="alert">
             <span class="font-medium">{{ ucfirst($type) }}!</span> {{ session($type) }}

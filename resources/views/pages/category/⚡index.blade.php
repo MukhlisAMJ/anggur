@@ -29,6 +29,7 @@ new class extends Component
     </flux:modal.trigger>
 
     <livewire:category.create />
+    <x-flash-message />
 
     {{-- table --}}
     <div class="overflow-x-auto">

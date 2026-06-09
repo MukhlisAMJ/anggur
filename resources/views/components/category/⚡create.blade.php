@@ -13,6 +13,8 @@ new class extends Component
         Flux::modal('create-category')->close();
 
         session()->flash('success', 'Category created successfully.');
+
+        $this->redirectRoute('category.index' ,navigate:true);
     }
 
     public function resetForm()
@@ -24,7 +26,7 @@ new class extends Component
 ?>
 
 <div>
-    <flux:modal name="create-category" class="md:w-150" x-on:close="$wire.resetForm()">
+    <flux:modal name="create-category" class="md:w-180" x-on:close="$wire.resetForm()">
         <form class="space-y-8" wire:submit.prevent="save">
             {{--header--}}
             <div class="space-y-2">

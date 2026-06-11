@@ -26,7 +26,7 @@ new class extends Component
 ?>
 
 <div>
-    <flux:modal name="create-category" class="md:w-200" x-on:close="$wire.resetForm()">
+    <flux:modal name="create-category" class="md:w-120" x-on:close="$wire.resetForm()">
         <form class="space-y-8" wire:submit.prevent="save">
             {{--header--}}
             <div class="space-y-2">

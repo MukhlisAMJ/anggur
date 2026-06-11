@@ -37,4 +37,17 @@ class CategoryForm extends Form
         Category::create($this->only(['name', 'description']));
         $this->reset();
     }
+
+    public function setCategory(Category $category)
+    {
+        $this->category = $category;
+        $this->name = $category->name;
+        $this->description = $category->description ?? '';
+    }
+
+    public function update(){
+        $this->validate();
+        $this->category->update($this->only(['name', 'description']));
+        $this->reset();
+    }
 }

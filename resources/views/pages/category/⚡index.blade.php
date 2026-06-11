@@ -32,6 +32,7 @@ new class extends Component
     </flux:modal.trigger>
 
     <livewire:category.create />
+    <livewire:category.edit />
     <x-flash-message />
 
     {{-- table --}}

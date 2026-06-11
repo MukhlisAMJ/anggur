@@ -12,9 +12,12 @@ new class extends Component
     use WithPagination;
 
     #[Computed]
-    public function categories()
-    {
+    public function categories(){
         return Category::latest()->paginate(8);
+    }
+
+    public function edit($id){
+        $this->dispatch('edit-category', id: $id);
     }
 };
 ?>

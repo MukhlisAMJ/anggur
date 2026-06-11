@@ -25,6 +25,11 @@ new class extends Component
         $this->redirectRoute('category.index' ,navigate:true);
     }
 
+    public function resetForm() {
+        $this->resetValidation();
+        $this->form->reset();
+    }
+
     #[On('confirm-delete')] 
     public function confirmDelete($id)
     {
